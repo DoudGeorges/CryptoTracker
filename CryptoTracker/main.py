@@ -18,6 +18,7 @@ bot.remove_command("help") # Remove built in help command
 @bot.event # On_Ready Event
 async def on_ready():
     print(f"Bot Online: {len(bot.guilds)} Guilds")
+    await bot.change_presence(activity = discord.Activity(type = discord.ActivityType.listening, name = f"-help | {len(bot.guilds)} servers"))
 
     '''
     new_embed = discord.Embed(title = "New Update", description = "A new update has just been released for CryptoTracker!\n \n• Track the current prices of *over 100* different currencies!\n• Convert between any two cryptocurrencies!\n \nSee `-help` for more information.", color = 0xF7931A)
