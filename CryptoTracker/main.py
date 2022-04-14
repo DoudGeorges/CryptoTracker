@@ -38,12 +38,14 @@ async def on_ready():
 
 @bot.event # On_Guild_Join Event
 async def on_guild_join(guild):
+    await bot.change_presence(activity = discord.Activity(type = discord.ActivityType.listening, name = f"-help | {len(bot.guilds)} servers"))
     now = datetime.now(timezone("America/Toronto"))
     current_time = now.strftime("%H:%M:%S")
     print(f"[{current_time}] Joined Guild: {guild.name} ({len(bot.guilds)} Total)")
 
 @bot.event # On_Guild_Remove Event
 async def on_guild_remove(guild):
+    await bot.change_presence(activity = discord.Activity(type = discord.ActivityType.listening, name = f"-help | {len(bot.guilds)} servers"))
     now = datetime.now(timezone("America/Toronto"))
     current_time = now.strftime("%H:%M:%S")
     print(f"[{current_time}] Left Guild: {guild.name} ({len(bot.guilds)} Total)")
