@@ -9,4 +9,3 @@ The simplest and quickest way to track current prices of Bitcoin and Ethereum! C
 ... and more!
 
 Type -help to get started!
-Official Server: https://discord.gg/vucnFUwvP3
